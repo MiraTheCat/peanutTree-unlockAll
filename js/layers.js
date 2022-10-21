@@ -71,6 +71,10 @@ addLayer("c", {
             title: "Increased Production",
             description: "Double your peanut production",
             cost: new Decimal(1),
+
+            canAfford() {
+                return hasUpgrade("c", 11);
+            },
         },
 
         13: {
